@@ -15,12 +15,11 @@
         <div class="hero-body">
             <div class="container main">
                 <div class="columns is-mobile">
-                    <div class="column"></div>
                     <div class="column has-text-centered">
                         <img class="image" id="logo" src="{% static 'box.png' %}" style="display: inline;" />
 
                         <h1 class="title is-1"><a href="/">Groceries</a></h1>
-                        <h2 class="subtitle is-3">Precios de productos</h2>
+                        <h2 class="subtitle is-3">Encuentra el mejor precio para tu compra</h2>
 
                         <form action="/" method="post">
                             {% csrf_token %}
@@ -31,7 +30,6 @@
                               </div>
                         </form>
                     </div>
-                    <div class="column"></div>
                 </div>
             </div>
         </div>
