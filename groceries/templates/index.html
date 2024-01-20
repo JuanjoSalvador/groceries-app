@@ -1,0 +1,47 @@
+{% load django_browser_reload %}
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="{% static 'main.css' %}">
+</head>
+
+<body>
+    <section class="hero is-fullheight is-link">
+        <div class="hero-body">
+            <div class="container main">
+                <div class="columns is-mobile">
+                    <div class="column"></div>
+                    <div class="column has-text-centered">
+                        <img class="image" id="logo" src="{% static 'box.png' %}" style="display: inline;" />
+
+                        <h1 class="title is-1"><a href="/">Groceries</a></h1>
+                        <h2 class="subtitle is-3">Precios de productos</h2>
+
+                        <form action="/" method="post">
+                            {% csrf_token %}
+                            <div class="field">
+                                <div class="control is-medium">
+                                  <input class="input is-medium has-text-centered" type="text" placeholder="¿Qué vamos a comprar hoy?">
+                                </div>
+                              </div>
+                        </form>
+                    </div>
+                    <div class="column"></div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-footer">
+                <div class="column has-text-centered">  
+                    <p>Made with <span class="heart">♥</span> by <a href="https://jsalvador.me/">Juanjo Salvador</a></p>
+                    <a href="https://www.flaticon.com/free-icons/groceries" title="groceries icons">Groceries icons created by justicon - Flaticon</a>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
