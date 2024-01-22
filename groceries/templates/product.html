@@ -3,50 +3,45 @@
 
     <section class="hero is-small is-link">
         <div class="hero-body has-text-centered">
-            <img class="image is-64x64" id="logo" src="{% static 'box.png' %}" style="display: inline;" />
-            <p class="title">
-                Groceries
-            </p>
-            <p class="subtitle">
-                Encuentra el mejor precio para tu compra
-            </p>
+            <a href="/">
+                <img class="image is-64x64" id="logo" src="{% static 'box.png' %}" style="display: inline;" />
+            
+                <p class="title">
+                    Groceries
+                </p>
+                <p class="subtitle">
+                    Encuentra el mejor precio para tu compra
+                </p>
+            </a>
         </div>
     </section>
     <br/>
     <section class="container">
         <div class="columns">
             <div class="column">
-                <figure class="image">
-                    <img src="https://placehold.co/512x512.png">
-                </figure>
-            </div>
-            <div class="column">
-                <h3 class="title is-3">Descripción</h3>
+                <h3 class="title is-3">{{ product.name }}</h3>
+
                 <p>
-                    Eos omnis earum rerum velit excepturi optio. Rerum et vitae similique consequatur ut. Dolore expedita ut tenetur ducimus minus.
-                </p>
-                <p>
-                    Nulla voluptas voluptate dolore illo itaque. Corrupti necessitatibus et saepe eos hic reiciendis dolor. Quia voluptas voluptas 
-                    quia placeat nobis incidunt placeat. Non enim enim expedita esse velit dicta iste quasi. Ducimus sed ea et.
+                    El mejor precio para este producto es <strong>{{ product.price }}</strong>
                 </p>
 
                 <br/>
-
+                
                 <div class="card">
                     <header class="card-header">
                       <p class="card-header-title">
-                        Mejor precio
+                        Precios por supermercado
                       </p>
                     </header>
                     <div class="card-content">
                         <p>
-                            <strong>2.98€/unidad en Mercadona</strong>
+                            
                         </p>
                         
                         <br/>
 
                         <figure class="image">
-                            <img src="https://placehold.co/400x220.png">
+                            <img src="https://placehold.co/400x100.png">
                         </figure>
                     </div>
                 </div>

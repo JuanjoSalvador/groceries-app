@@ -1,0 +1,40 @@
+{% include 'head.html' %}
+{% load static %}
+
+    <section class="hero is-small is-link">
+        <div class="hero-body has-text-centered">
+            <a href="/">
+                <img class="image is-64x64" id="logo" src="{% static 'box.png' %}" style="display: inline;" />
+            
+                <p class="title">
+                    Groceries
+                </p>
+                <p class="subtitle">
+                    Encuentra el mejor precio para tu compra
+                </p>
+            </a>
+        </div>
+    </section>
+    <br/>
+    <section class="container">
+        <div class="columns">
+            <div class="column">
+                <h3 class="title is-3">Resultados de búsqueda para {{ search }}</h3>
+                <br/>
+                {% for product in queryset %}
+                    <div class="card">
+                        <div class="card-content">
+                            <h3 class="subtitle is-3">
+                                <a href="/product/{{ product.id }}/">{{ product.name }}</a>
+                            </h3>
+                            <p>
+                                {{ product.price }}
+                            </p>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+    
