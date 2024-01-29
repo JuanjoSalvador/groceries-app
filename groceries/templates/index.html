@@ -11,11 +11,10 @@
                         <h1 class="title is-1"><a href="/">Groceries</a></h1>
                         <h2 class="subtitle is-3">Encuentra el mejor precio para tu compra</h2>
 
-                        <form action="search/" method="post">
-                            {% csrf_token %}
+                        <form action="search/" method="get">
                             <div class="field">
                                 <div class="control is-medium">
-                                    <input class="input is-medium has-text-centered" type="text" name="searchbar" placeholder="¿Qué vamos a comprar hoy?">
+                                    <input class="input is-medium has-text-centered" type="text" name="q" placeholder="¿Qué vamos a comprar hoy?">
                                 </div>
                                 </div>
                         </form>

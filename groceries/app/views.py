@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.db.models import Q
 
 from .models import Product
 
@@ -7,8 +8,10 @@ def index(request):
     return render(request, "index.html")
 
 def search(request):
-    query = request.POST['searchbar']
-    queryset = Product.objects.filter(name__contains=query)
+    query = request.GET['q']
+    queryset = Product.objects.filter(
+        Q(name__icontains=query) | Q(description__icontains=query)
+    )
 
     values = {"search": query, "queryset": queryset}
 
