@@ -13,6 +13,7 @@ class Product(models.Model):
     brand = models.CharField(max_length=80, default="")
     description = models.CharField(max_length=500, default="")
     price = models.FloatField()
+    weight = models.FloatField(blank=True, null=True)
     store = models.ForeignKey(Store, on_delete=models.CASCADE, null=True)
 
     def __str__(self, *args, **kwargs):
