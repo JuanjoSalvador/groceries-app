@@ -14,9 +14,10 @@
 	"forwardPorts": [8000, 5432],
 
 	// Use 'postCreateCommand' to run commands after the container is created.
-	"postCreateCommand": "pip install --user -r requirements.txt && yarn install --modules-folder ./groceries/static",
+	"postCreateCommand": "pip install --user -r requirements.txt && yarn install --modules-folder ./groceries/node_modules/static",
 	"features": {
-		"ghcr.io/devcontainers/features/node:1": {}
+		"ghcr.io/devcontainers/features/node:1": {},
+		"ghcr.io/robbert229/devcontainer-features/postgresql-client:1": {}
 	}
 
 	// Configure tool-specific properties.
