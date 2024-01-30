@@ -1,17 +1,75 @@
-# GitHub Codespaces ♥️ Django
+# Groceries
 
-Welcome to your shiny new Codespace running Django! We've got everything fired up and running for you to explore Django.
+![image](https://github.com/JuanjoSalvador/groceries-app/assets/5058655/8a703542-10d4-4019-a974-373b63cbd0e7)
 
-You've got a blank canvas to work on from a git perspective as well. There's a single initial commit with the what you're seeing right now - where you go from here is up to you!
+Groceries is an app designed to helping you finding best prices for your daily/weekly/monthly shopping list at different stores and supermarkets. Made with Django and Bulma.
 
-Everything you do here is contained within this one codespace. There is no repository on GitHub yet. If and when you’re ready you can click "Publish Branch" and we’ll create your repository and push up your project. If you were just exploring then and have no further need for this code then you can simply delete your codespace and it's gone forever.
-To collect static files:
+Current version is v0.0.1
 
-```python
+## Roadmap
+
+✔ Done | 👷‍♂️ Work in Progress | ❔ Planned | ❌ Not planned*
+
+Something not planned, doesn't mean it won't or couldn't be implemented in the future.
+
+Status | Features
+--|--
+✔ Ready | Basic database search functions  
+✔ Ready | Allow self-hosting for personal usage
+❔ Planned | Multi-language support (English/Spanish)
+❔ Planned | Full-text search engine
+❔ Planned | Allow user registration
+❔ Planned | Allow user submitions
+❔ Planned | Container support (Docker/Podman)
+❌ Not planned | Support federation between servers
+
+## Development
+
+First of all, you need to grab the project and install dependecies using one of the following methods. You will also need `yarn` for JavaScript packages.
+
+Groceries is using SQLite3 as default database but I'm planning to move to PostgreSQL in order to allow full-text search during next releases.
+
+### Installation (local)
+
+#### Poetry
+By default, this project uses Poetry to manage dependencies.
+
+```shell
+git clone git@github.com:JuanjoSalvador/groceries-app.git && cd groceries-app
+poetry install
+yarn install --modules-folder ./groceries/staticfiles/node_modules
+```
+#### Virtualenv
+This project uses Poetry by default, but you can run it using a classic virtual environment management tool and pip.
+
+```shell
+git clone git@github.com:JuanjoSalvador/groceries-app.git && cd groceries-app
+python -m virtualenv env
+source env/bin/activate
+pip install --user -r requirements.txt
+yarn install --modules-folder ./groceries/staticfiles/node_modules
+```
+
+### Running Groceries
+First of all, you need to collect all static files.
+
+```shell
 python manage.py collectstatic
 ```
-To run this application:
+After this step, you can just run migrations and initialize database. You will need an email at the moment of initialize database since it will also create a superuser for you. You can enter whatever email you want, since is made for local development it doesn't need to exists, but make sure you remember it! It also will prompt you for a password.
+
+Database initialization will add some sample data. Sample data can be found at `/data/sample-data.ods`, feel free to modify it as you want.
+
+```shell
+python manage.py migrate
+python manage.py initdb [email] 
+```
+
+Once database is ready, you can run the app and make sure everything is OK.
 
 ```python
 python manage.py runserver
 ```
+
+### Container support
+Since it still not ready, I'm planning to add Docker/Podman support for this project in the future.
