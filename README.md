@@ -1,5 +1,7 @@
 # Groceries
 
+![image](https://github.com/JuanjoSalvador/groceries-app/assets/5058655/8a703542-10d4-4019-a974-373b63cbd0e7)
+
 Groceries is an app designed to helping you finding best prices for your daily/weekly/monthly shopping list at different stores and supermarkets. Made with Django and Bulma.
 
 Current version is v0.0.1
@@ -14,7 +16,8 @@ Status | Features
 --|--
 ✔ Ready | Basic database search functions  
 ✔ Ready | Allow self-hosting for personal usage
-👷‍♂️ WIP | Full-text search engine (v0.1.0)
+❔ Planned | Multi-language support (English/Spanish)
+❔ Planned | Full-text search engine
 ❔ Planned | Allow user registration
 ❔ Planned | Allow user submitions
 ❔ Planned | Container support (Docker/Podman)
