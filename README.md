@@ -7,21 +7,27 @@ Groceries is an app designed to helping you finding best prices for your daily/w
 Current version is v0.0.1
 
 ## Roadmap
-
-✔ Done | 👷‍♂️ Work in Progress | ❔ Planned | ❌ Not planned*
-
 Something not planned, doesn't mean it won't or couldn't be implemented in the future.
 
-Status | Features
---|--
+### User features
+
+| Status | Features |
+|:-------|:---------|
 ✔ Ready | Basic database search functions  
 ✔ Ready | Allow self-hosting for personal usage
 ❔ Planned | Multi-language support (English/Spanish)
 ❔ Planned | Full-text search engine
 ❔ Planned | Allow user registration
 ❔ Planned | Allow user submitions
+
+### Development features
+
+|Status | Features |
+|:------|:---------|
+👷‍♂️ Work in Progress | Contributing guidelines
+❔ Planned | Linter, style and quality checkings on push
 ❔ Planned | Container support (Docker/Podman)
-❌ Not planned | Support federation between servers
+
 
 ## Development
 
