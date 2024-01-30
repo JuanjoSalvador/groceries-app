@@ -19,6 +19,8 @@ Something not planned, doesn't mean it won't or couldn't be implemented in the f
 ❔ Planned | Full-text search engine
 ❔ Planned | Allow user registration
 ❔ Planned | Allow user submitions
+❔ Planned | Suggestion based on the product user is watching now
+
 
 ### Development features
 
