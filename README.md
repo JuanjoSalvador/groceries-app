@@ -73,3 +73,7 @@ python manage.py runserver
 
 ### Container support
 Since it still not ready, I'm planning to add Docker/Podman support for this project in the future.
+
+## License
+
+Groceries is under GNU GPL 3.0 License
