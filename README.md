@@ -37,6 +37,31 @@ Groceries is using SQLite3 as default database but I'm planning to move to Postg
 
 ### Installation (local)
 
+#### Dependencies
+
+* Python 3.10+
+* Node.js and Yarn
+* Poetry (optional)
+* Virtualenv (optional)
+
+To install Poetry and Virtualenv, you will need also `pip`.
+
+```shell
+python -m pip install poetry
+```
+
+or
+
+```shell
+python -m pip install virtualenv
+```
+
+and
+
+```shell
+npm install -g yarn
+```
+
 #### Poetry
 By default, this project uses Poetry to manage dependencies.
 
