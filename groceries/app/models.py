@@ -2,11 +2,13 @@ from datetime import date
 
 from django.db import models
 
+
 class Store(models.Model):
     name = models.CharField(max_length=20)
 
     def __str__(self, *args, **kwargs):
         return f"{self.name}"
+
 
 class Product(models.Model):
     name = models.CharField(max_length=80)
@@ -18,15 +20,12 @@ class Product(models.Model):
 
     def __str__(self, *args, **kwargs):
         return f"{self.name} - {self.brand}"
-    
+
     def save(self, *args, **kwargs):
         super(Product, self).save(*args, **kwargs)
 
-        ProductHistory.objects.create(
-            product = self,
-            price = self.price,
-            date = date.today()
-        )
+        ProductHistory.objects.create(product=self, price=self.price, date=date.today())
+
 
 class ProductHistory(models.Model):
     product = models.ForeignKey(Product, on_delete=models.CASCADE)
