@@ -19,9 +19,9 @@
     <section class="container">
         <div class="columns">
             <div class="column">
-                <h3 class="title is-3">Resultados de búsqueda para {{ search }}</h3>
+                <h3 class="title is-3">Resultados de búsqueda para {{ query }}</h3>
                 <br/>
-                {% for product in queryset %}
+                {% for product in search_results %}
                     <div class="card">
                         <div class="card-content">
                             <h3 class="subtitle is-3">

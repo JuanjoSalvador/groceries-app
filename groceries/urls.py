@@ -13,17 +13,18 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+
 from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
 
-from groceries.app import views as core_views
+from groceries.app import views
 
 urlpatterns = [
-    path("", core_views.index),
-    path("search/", core_views.search),
-    path("product/<int:pk>/", core_views.product_view),
+    path("", views.IndexView.as_view()),
+    path("search/", views.SearchView.as_view()),
+    path("product/<int:pk>/", views.ProductDetailView.as_view()),
     path("admin/", admin.site.urls),
     path("__reload__/", include("django_browser_reload.urls")),
 ]

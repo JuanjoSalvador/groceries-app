@@ -1,24 +1,43 @@
-from django.shortcuts import render
+from typing import Any
+
 from django.db.models import Q
+from django.db.models.query import QuerySet
+from django.views.generic import TemplateView, ListView, DetailView
 
 from .models import Product
 
 
-def index(request):
-    return render(request, "index.html")
+class IndexView(TemplateView):
+    template_name = "index.html"
 
-def search(request):
-    query = request.GET['q']
-    queryset = Product.objects.filter(
-        Q(name__icontains=query) | Q(description__icontains=query)
-    )
 
-    values = {"search": query, "queryset": queryset}
+class SearchView(ListView):
+    model = Product
+    template_name = "search.html"
 
-    return render(request, "search.html", values)
+    def get_queryset(self) -> QuerySet[Any]:
+        query = self.request.GET.get("q")
+        return Product.objects.filter(
+            Q(name__icontains=query) | Q(description__icontains=query)
+        )
 
-def product_view(request, pk=None):
-    queryset = Product.objects.get(pk=pk)
-    context = {"product": queryset}
+    def get_context_data(self, **kwargs: Any) -> dict[str, Any]:
+        context = super(SearchView, self).get_context_data(**kwargs)
+        context["query"] = self.request.GET.get("q")
+        context["search_results"] = self.get_queryset()
 
-    return render(request, "product.html", context)
+        return context
+
+
+class ProductDetailView(DetailView):
+    model = Product
+    template_name = "product.html"
+
+    def get_queryset(self) -> QuerySet[Any]:
+        return Product.objects.filter(pk=self.kwargs.get("pk"))
+
+    def get_context_data(self, **kwargs: Any) -> dict[str, Any]:
+        context = super(ProductDetailView, self).get_context_data(**kwargs)
+        context["product"] = self.get_queryset().first()
+
+        return context
