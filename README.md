@@ -26,8 +26,8 @@ Something not planned, doesn't mean it won't or couldn't be implemented in the f
 
 |Status | Features |
 |:------|:---------|
-👷‍♂️ Work in Progress | Contributing guidelines
-❔ Planned | Linter, style and quality checkings on push
+✔ Ready  | Contributing guidelines
+👷‍♂️ Work in Progress | Linter, style and quality checkings on push
 ❔ Planned | Container support (Docker/Podman)
 
 
