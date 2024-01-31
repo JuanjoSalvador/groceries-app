@@ -13,22 +13,24 @@ Something not planned, doesn't mean it won't or couldn't be implemented in the f
 
 | Status | Features |
 |:-------|:---------|
-✔ Ready | Basic database search functions  
 ✔ Ready | Allow self-hosting for personal usage
-❔ Planned | Multi-language support (English/Spanish)
-❔ Planned | Full-text search engine
 ❔ Planned | Allow user registration
 ❔ Planned | Allow user submitions
+❔ Planned | API support for third-party apps
+✔ Ready | Basic database search functions  
+❔ Planned | Full-text search engine
+❔ Planned | Multi-language support (English/Spanish)
 ❔ Planned | Suggestion based on the product user is watching now
+
 
 
 ### Development features
 
 |Status | Features |
 |:------|:---------|
+❔ Planned | Container support (Docker/Podman)
 ✔ Ready  | Contributing guidelines
 👷‍♂️ Work in Progress | Linter, style and quality checkings on push
-❔ Planned | Container support (Docker/Podman)
 
 
 ## Development
