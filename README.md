@@ -9,28 +9,30 @@ Current version is v0.0.1
 ## Roadmap
 Something not planned, doesn't mean it won't or couldn't be implemented in the future.
 
+✔ Ready | ❔ Planned | 👷‍♂️ Work in Progress
+
 ### User features
 
 | Status | Features |
-|:-------|:---------|
-✔ Ready | Allow self-hosting for personal usage
-❔ Planned | Allow user registration
-❔ Planned | Allow user submitions
-❔ Planned | API support for third-party apps
-✔ Ready | Basic database search functions  
-❔ Planned | Full-text search engine
-❔ Planned | Multi-language support (English/Spanish)
-❔ Planned | Suggestion based on the product user is watching now
+|:-------:|:---------|
+✔ | Allow self-hosting for personal usage
+❔ | Allow user registration
+❔ | Allow user submitions
+❔ | API support for third-party apps
+✔ | Basic database search functions  
+❔ | Full-text search engine
+❔ | Multi-language support (English/Spanish)
+❔ | Suggestion based on the product user is watching now
 
 
 
 ### Development features
 
 |Status | Features |
-|:------|:---------|
-❔ Planned | Container support (Docker/Podman)
-✔ Ready  | Contributing guidelines
-👷‍♂️ Work in Progress | Linter, style and quality checkings on push
+|:------:|:---------|
+❔ | Container support (Docker/Podman)
+✔ | Contributing guidelines
+👷‍♂️ | Linter, style and quality checkings on push
 
 
 ## Development
