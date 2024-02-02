@@ -17,7 +17,7 @@ Something not planned, doesn't mean it won't or couldn't be implemented in the f
 |:-------:|:---------|
 ✔ | Allow self-hosting for personal usage
 ❔ | Allow user registration
-❔ | Allow user submitions
+✔ | Allow user submitions
 ❔ | API support for third-party apps
 ✔ | Basic database search functions  
 ❔ | Full-text search engine
