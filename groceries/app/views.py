@@ -2,9 +2,10 @@ from typing import Any
 
 from django.db.models import Q
 from django.db.models.query import QuerySet
-from django.views.generic import TemplateView, ListView, DetailView
+from django.views.generic import CreateView, TemplateView, ListView, DetailView
 
 from .models import Product
+from .forms import BulmaErrorList, ProductAddForm
 
 
 class IndexView(TemplateView):
@@ -41,3 +42,12 @@ class ProductDetailView(DetailView):
         context["product"] = self.get_queryset().first()
 
         return context
+
+
+class ProductAddView(CreateView):
+    model = Product
+    form_class = ProductAddForm
+    form_name = "form"
+    template_name = "add_product_form.html"
+    success_url = "/"
+    error_class = BulmaErrorList

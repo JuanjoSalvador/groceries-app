@@ -25,6 +25,7 @@ urlpatterns = [
     path("", views.IndexView.as_view()),
     path("search/", views.SearchView.as_view()),
     path("product/<int:pk>/", views.ProductDetailView.as_view()),
+    path("product/create/", views.ProductAddView.as_view()),
     path("admin/", admin.site.urls),
     path("__reload__/", include("django_browser_reload.urls")),
 ]
