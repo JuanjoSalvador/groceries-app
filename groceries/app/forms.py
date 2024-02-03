@@ -4,6 +4,7 @@ from django.forms import (
     ChoiceField,
     FloatField,
     TextInput,
+    Textarea,
     NumberInput,
 )
 from django.forms.utils import ErrorList
@@ -28,8 +29,8 @@ class ProductAddForm(ModelForm):
         )
     )
     description = CharField(
-        widget=TextInput(
-            attrs={"class": "input", "maxlength": 500, "autocomplete": "off"}
+        widget=Textarea(
+            attrs={"class": "textarea", "maxlength": 500, "autocomplete": "off"}
         )
     )
     price = FloatField(
