@@ -13,7 +13,7 @@ class Command(BaseCommand):
         parser.add_argument("email", type=str)
 
     def handle(self, *args, **options):
-        sample_data = "/workspaces/groceries-app/data/sample-data.ods"
+        sample_data = "./data/sample-data.ods"
         df_products = pd.read_excel(sample_data, engine="odf", sheet_name="products")
         df_stores = pd.read_excel(sample_data, engine="odf", sheet_name="stores")
 
